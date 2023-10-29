@@ -34,6 +34,10 @@ class Tablet
 	def obter_informacoes
 				"Marca: #{@marca}, Modelo: #{@modelo}, Tamanho de tela: #{@tamanho_tela}, Capacidade de armazenamento: #{@armazenamento_interno}, cor: #{@cor}, Memória RAM: #{@ram}, Sistema Operacional: #{@sistema_operacional}"
 	end
+
+	def conectar_wifi
+		puts "Conectando o wi-fi"		
+	end
 end
 
 
