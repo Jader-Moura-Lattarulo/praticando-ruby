@@ -1,6 +1,18 @@
+require 'tty-cursor'
+require 'tty-spinner'
+
 class Inicializacao
   def self.inicializando
     system('cls')
+
+    spinner = TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Carregando...", format: :pulse_2)
+    spinner.auto_spin
+    sleep(4)
+    spinner.stop('Pronto!')
+
+    cursor = TTY::Cursor
+    print cursor.move_to(50,15)
 
     print "Inicializando."
     4.times do |wait|
