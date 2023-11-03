@@ -4,7 +4,7 @@ class Desafio
 	end
 
 	def display_title
-		puts " DESAFIO #{@desafio_numero}".center(30, '#')
+		puts " DESAFIO #{@desafio_numero} ".center(30, '#')
 	end
 end
 
@@ -24,11 +24,11 @@ class Desafio06 < Desafio
 	def run
 		display_title
 		print 'Qual número você quer saber o dobro, triplo e raiz quadrada? '
-		numero = get.to_i
+		numero = gets.to_i
 		dob = numero * 2
 		tri = numero * 3
 		raiz = Math.sqrt(numero)
-		puts "O dobro é: #{dob}, o tiplo é: #{tri} e a raiz quadrada é: #{raiz}"
+		puts "O dobro é: #{dob}, o tiplo é: #{tri} e a raiz quadrada é: #{raiz}\n\n"
 	end
 end
 
@@ -42,18 +42,18 @@ class Desafio07 < Desafio
 		print 'Insira a segunda nota: '
 		nota02 = gets.to_f
 		media = (nota01 + nota02) / 2
-		puts "O anluno #{nome}, tirou as notas #{nota01} e #{nota2} e ficou com a média final: %.2f\n\n" % media
+		puts "O aluno #{nome}, tirou as notas #{nota01} e #{nota02} e ficou com a média final: %.2f\n\n" % media
 	end
 end
 
 class Desafio08 < Desafio 
 	def run
 		display_title
-		print 'Quantos metros você quer converter para centímetros e milímetros?'
+		print 'Quantos metros você quer converter para centímetros e milímetros? '
 		metros = gets.to_f
 		cent = metros *100
 		mm = metros * 1000
-		puts "Conversão realizada, #{metros} é equivalente a #{cent} centímetros e #{mm} milímetros. \n\n"
+		puts "Conversão realizada, #{metros} metro(s) é equivalente a #{cent} centímetros e #{mm} milímetros. \n\n"
 	end
 end
 
@@ -63,7 +63,7 @@ class Desafio09 < Desafio
 		print 'Qual número você deseja saber a tabuada? '
 		num = gets.to_i
 		(1..10).each do |i|
-			puts "#{num} X %2d" % [i, num * i]
+			puts "#{num} X %2d = #{num*i}" % [i, num * i]
 		end
 		puts "\n"
 	end
@@ -72,9 +72,9 @@ end
 class Desafio10 < Desafio 
 	def run
 		display_title
-		print 'Quantos reais você quer converter para dórlar? R$'
+		print 'Quantos reais você quer converter para dólar? R$'
 		reais = gets.to_f
-		dol / 4.95
+		dol = reais / 4.95
 		puts "O Dólar está equivalente a R$4,95, portanto você possui: $%.2f\n\n" % dol
 	end
 end
@@ -99,7 +99,8 @@ class Desafio12 < Desafio
 		preco = gets.to_f
 		desconto = preco * 0.05
 		novo_preco = preco - desconto
-		puts "Com o desconto de 5% o produto passa a valer: R$%.2f\n\n" % novo_preco
+		print "Com o desconto de 5% o produto passa a valer: R$"
+		puts"%.2f\n\n" %novo_preco
 	end
 end
 
@@ -110,7 +111,8 @@ class Desafio13 < Desafio
 		salario = gets.to_f
 		aumento = salario * 0.15
 		novo_salario = salario + aumento
-		puts "Com os 15% de aumento você passa a receber: R$%.2f" % novo_salario
+		print "Com os 15% de aumento você passa a receber: R$"
+		puts'%.2f' %novo_salario
 	end
 end
 
